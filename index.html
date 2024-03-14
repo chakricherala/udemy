@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/lib.min.js" integrity="sha512-EHeO/V3WqEMf+1AQLafHol6UoOt7OM+IIxmblvgOvMooHZlyGgMT+yKg/iuDnQqbnw6bcOmnXR692Vig/uMagA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <title>Udemy</title>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    'sm': '640px',
+                    // => @media (min-width: 640px) { ... }
+
+                    'md': '768px',
+                    // => @media (min-width: 768px) { ... }
+
+                    'lg': '1024px',
+                    // => @media (min-width: 1024px) { ... }
+
+                    'll': '1000px',
+
+                    "llc": '990px',
+
+                    'llxc': '900px',
+
+                    'xl': '1280px',
+                    // => @media (min-width: 1280px) { ... }
+
+                    '2xl': '1536px',
+                    // => @media (min-width: 1536px) { ... }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .star{
+            color: #B4690E;
+          }
+        }
+        @layer utilities {
+          .catlogue::-webkit-scrollbar {
+            display: none;
+          }
+        }
+        @layer utilities {
+          .listitem::-webkit-scrollbar {
+            display: none;
+          }
+        }
+      </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar flex items-center justify-between mx-6 my-4">
+            <button type="button" class="md:hidden"><span class="material-symbols-outlined">menu</span></button>
+            <a href="#"> <img src="images/udemy-logo.png" alt="udemy logo" class="logo h-10"></a>
+            <!-- <div class="middle flex h-3.5 items-center gap-7"> -->
+            <a href="#" class="hidden llxc:inline-block">Categories</a>
+            <div class="hidden md:flex">
+                div class="search flex items-center border border-slate-900 rounded-3xl max-w-96 h-12 px-2">
+                <span class="material-symbols-outlined ml-2 mt-1">search</span>
+                <input type="search" class="ml-2 border-l-stone-500" placeholder="Search for anything">
+            </div>
+            </div>
+            <a href="#" class="hidden lg:inline-block">Udemy Business</a>
+            <a href="#" class="hidden ll:inline-block">Teach on Udemy</a>
+            <a href="#" class="hidden llc:inline-block">My Learning</a>
+            <!-- </div> -->
+            <!-- <div class="right flex items-center gap-6"> -->
+            <div class="flex gap-2 md:hidden">
+                <span class="material-symbols-outlined">
+                    favorite
+                </span>
+                <span class="material-symbols-outlined">
+                    shopping_cart
+                </span>
+            </div>
+            <span class="material-symbols-outlined hidden md:inline-block">
+                favorite
+            </span>
+            <span class="material-symbols-outlined hidden md:inline-block">
+                shopping_cart
+            </span>
+            <span class="material-symbols-outlined hidden llxc:inline-block">
+                notifications
+            </span>
+            <div
+                class="profile w-10 h-10 bg-slate-900 rounded-full text-2xl text-white font-bold text-center pt-0.5 pr-0.5 hidden md:inline-block">
+                CC</div>
+            <!-- </div> -->
+        </nav>
+        <!-- <div class="links flex justify-between px-8 py-3 border-t border-slate-950 shadow-md hidden md:inline-block"> -->
+        <div class="hidden shadow-md"><div class="links flex justify-between px-8 py-3 border-t border-slate-950 md:flex ">
+
+            <a href="#">Development</a>
+            <a href="#">Business</a>
+            <a href="#">Finance & Accounting</a>
+            <a href="#">IT & Software</a>
+            <a href="#" class="hidden md:inline-block">Ofice Productivity</a>
+            <a href="#" class="hidden llc:inline-block">Personal Development</a>
+            <a href="#" class="hidden llc:inline-block">Design</a>
+            <a href="#" class="hidden ll:inline-block">Marketing</a>
+            <a href="#" class="hidden lg:inline-block">Health & Fitness</a>
+        </div>
+    </div>
+    </header>
+    <section class="picture">
+        <!-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/1cd05c12-f169-45ae-a452-adb8c81739b4.jpg" class="d-block w-100 hidden md:inline-block" alt="...">
+                    <img src="images/b81740e9-3a76-4517-b5b6-9899802b4166.jpg" class="d-block w-100 md:hidden" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/55020143-7f35-49f2-b11d-350f57910d1c.jpg" class="d-block w-100 hidden md:inline-block" alt="...">
+                    <img src="images/de24c061-648a-4126-98d0-566ee0100281.jpg" class="d-block w-100 md:hidden" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div> -->
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/b81740e9-3a76-4517-b5b6-9899802b4166.jpg" class="d-block w-100 d-md-none"
+                        alt="...">
+                    <img src="images/1cd05c12-f169-45ae-a452-adb8c81739b4.jpg" class="d-none d-md-inline-block w-100"
+                        alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/de24c061-648a-4126-98d0-566ee0100281.jpg" class="d-block w-100 d-md-none"
+                        alt="...">
+                    <img src="images/55020143-7f35-49f2-b11d-350f57910d1c.jpg" class="d-none d-md-inline-block w-100"
+                        alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </section>
+    <section class="progres">
+        <div class="flex justify-between px-3 mt-8">
+            <div class="text-2xl lg:text-4xl font-serif">
+                <h1>Let's start learning, Chakri</h1>
+            </div>
+            <a href="#" class="underline underline-offset-1 font-bold text-lg text-indigo-700">My Learning</a>
+        </div>
+        <div class=" text-white bg-black md:text-sm lg:text-lg flex justify-between px-3 py-3 items-center mx-2 my-4">
+            <h2><b>Training 2 or more people? </b>Get your team access to Udemy's top 25,000+ courses</h2>
+            <div class="flex gap-2">
+                <button type="button" class="bg-white text-black px-2 py-2 outline font-semibold inline-block">Get Udemy
+                    Business</button>
+                <button type="button"
+                    class="bg-black text-white outline outline-white px-2 py-2 font-semibold inline-block">Dismiss</button>
+            </div>
+        </div>
+        <div class="text-2xl lg:text-4xl font-serif px-3">
+            <h1>What to learn next</h1>
+            <h2 class="text-base lg:text-xl">Our top pic for you</h2>
+        </div>
+    </section>
+    <section>
+        <h6 class="px-3 py-2 text-2xl font-semibold">Because you viewed “<a href="#"
+                class="text-blue-600 underline underline-offset-1">WordPress Theme Development from Scratch 2.0</a>”
+        </h6>
+        <div class="catlogue flex px-3 py-2 gap-4 overflow-x-scroll scrollbar-hidden">
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1010580_b7ba_4.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1010586_b622_3.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1026604_790b_2.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1109602_1ef3_8.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1076424_6363_2.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1187016_51b3.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1203374_6d6f_3.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1341268_c20e_3.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+        </div>
+        <h6 class="px-3 py-2 text-2xl font-semibold">Because you searched for “<a href="#"
+                class="text-blue-600 underline underline-offset-1">WordPres.org</a>”</h6>
+        <div class="catlogue flex px-3 py-2 gap-4 overflow-x-scroll scrollbar-hidden">
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1356532_c5f4_2.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1406344_1d65_3.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1455618_592a_4.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1463186_f962_5.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1463348_52a4_4.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1467886_56aa.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1479516_0e42_2.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1523066_334c_14.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+        </div>
+        <h6 class="px-3 py-2 text-2xl font-semibold">Recommended for you</h6>
+        <div class="catlogue flex px-3 py-2 gap-4 overflow-x-scroll scrollbar-hidden">
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1570206_26c6_6.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1576854_9aeb_2.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1634760_70f1_4.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1643044_e281_5.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1672410_9ff1_5 (1).jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1708340_7108_5.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1743420_0062.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1754098_e0df_3.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+        </div>
+        <h6 class="px-3 py-2 text-2xl font-semibold">Topics recomended by you</h6>
+        <div class="listitem flex overflow-x-scroll gap-3 px-3 py-3">
+            <div class="flex flex-col gap-3">
+                <button class="min-w-64 min-h-12 font-semibold text-lg outline outline-1 outline-black"
+                    type="button">Web development </button>
+                <button class="min-w-64 min-h-12 font-semibold text-lg outline outline-1 outline-black"
+                    type="button">Wordpress </button>
+            </div>
+            <div class="flex flex-col gap-3">
+                <button class="min-w-64 min-h-12 font-semibold text-lg outline outline-1 outline-black"
+                    type="button">Javascript </button>
+                <button class="min-w-64 min-h-12 font-semibold text-lg outline outline-1 outline-black"
+                    type="button">Search engine Optimization </button>
+            </div>
+            <div class="flex flex-col gap-3">
+                <button class="min-w-64 min-h-12 font-semibold text-lg outline outline-1 outline-black"
+                    type="button">Node.js </button>
+                <button class="min-w-64 min-h-12 font-semibold text-lg outline outline-1 outline-black"
+                    type="button">Elementor</button>
+            </div>
+            <div class="flex flex-col gap-3">
+                <button class="min-w-64 min-h-12 font-semibold text-lg outline outline-1 outline-black"
+                    type="button">Web Design </button>
+                <button class="min-w-64 min-h-12 font-semibold text-lg outline outline-1 outline-black"
+                    type="button">MongoDb </button>
+            </div>
+            <div class="flex flex-col gap-3">
+                <button class="min-w-64 min-h-12 font-semibold text-lg outline outline-1 outline-black"
+                    type="button">CSS </button>
+                <button class="min-w-64 min-h-12 font-semibold text-lg outline outline-1 outline-black"
+                    type="button">Wordpres Theme </button>
+            </div>
+            <div class="flex flex-col gap-3">
+                <button class="min-w-64 min-h-12 font-semibold text-lg outline outline-1 outline-black" type="button">
+                    Frontend Web development </button>
+                <button class="min-w-64 min-h-12 font-semibold text-lg outline outline-1 outline-black"
+                    type="button">Wordpress Plgin</button>
+            </div>
+            <div class="flex flex-col gap-3">
+                <button class="min-w-64 min-h-12 font-semibold text-lg outline outline-1 outline-black"
+                    type="button">Python </button>
+                <button class="min-w-64 min-h-12 font-semibold text-lg outline outline-1 outline-black"
+                    type="button">Express.js </button>
+            </div>
+        </div>
+        <h6 class="px-3 py-2 text-2xl font-semibold">Learners are viewing</h6>
+        <div class="catlogue flex px-3 py-2 gap-4 overflow-x-scroll scrollbar-hidden">
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1778502_f4b9_12.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1879018_95b6_3.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1917546_682b_3 (1).jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1920594_9dea.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/1921420_384a_14.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/19332_6b49_15.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/2070319_d638_7.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+            <div class="min-w-64 min-h-80 outline-none">
+                <img src="courseimg/2121018_9de5_5.jpg" alt="">
+                <h4 class=" font-semibold my-2 items-center">WordPress Theme Development from Scratch</h4>
+                <h5>Marcelo Nivera Carlos</h5>
+                <div class="flex gap-1">
+                    <p>4.6
+                    <div class="star text-sm">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>(328)
+                    </p>
+                </div>
+                <h4 class=" font-semibold">₹ 3,820</h4>
+            </div>
+        </div>
+
+    </section>
+    <footer class="bg-black text-white px-3 py-4">
+        <div class="flex justify-between border-b pb-4">
+            <div>
+                <h6 class="text-xl font-semibold">Teach the world online</h6>
+                <p>Create an online video course, reach students across the globe, and earn money</p>
+            </div>
+            <button class="outline outline-white outline-2 px-2 py-2 text-lg font-semibold" type="button">Teach on
+                udemy</button>
+        </div>
+        <div class="flex-auto  justify-between mt-2 border-b py-2">
+            <div>
+                <h6 class="text-2xl font-semibold">Top companies choose <span class="text-purple-400">Udemy
+                        Business</span> to build in-demand career skills.</h6>
+            </div>
+            <div class="flex md::flex-col pr-4 gap-2">
+                <img src="images/nasdaq-light.svg" alt="">
+                <img src="images/box-light.svg" alt="">
+                <img src="images/volkswagen-light.svg" alt="">
+                <img src="images/netapp-light.svg" alt="">
+                <img src="images//eventbrite-light.svg" alt="">
+            </div>
+        </div>
+        <div class="flex justify-between my-4">
+            <div class="flex flex-col">
+                <a href="">Udemy Business</a>
+                <a href=""> Teach on Udemy</a>
+                <a href="">Get the app</a>
+                <a href=""> About us</a>
+                <a href="">Contact us</a>
+            </div>
+            <div class="flex flex-col">
+                <a href="">Careers</a>
+                <a href="">  Blog</a>
+                <a href=""> Help and Support</a>
+                <a href="">  Affiliate</a>
+                <a href="">Investors</a>
+            </div>
+            <div class="flex flex-col">
+                <a href="">Terms </a>
+                <a href="">  Privacy policy</a>
+                <a href="">Cookie Settings</a>
+                <a href="">   Sitemap</a>
+                <a href=""> Accessibility statement</a>
+            </div>
+            <div class="flex flex-col">
+                <button class="outline outline-2 px-4 py-2" type="button">English</button>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
